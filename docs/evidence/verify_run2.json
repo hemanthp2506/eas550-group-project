@@ -1,0 +1,547 @@
+{
+  "label": "run2",
+  "database": "localhost:5432/olist",
+  "fingerprints": {
+    "product_categories": {
+      "rows": 71,
+      "md5": "ee1682a4a14109f47181eb5279a88b5e"
+    },
+    "sellers": {
+      "rows": 1617,
+      "md5": "d34fed9740265a598338da7567d1b9b9"
+    },
+    "products": {
+      "rows": 6619,
+      "md5": "32ac69800c02115046e94e441cf3ffac"
+    },
+    "order_customers": {
+      "rows": 9901,
+      "md5": "783a4007a5c7c23e7578b26e8de4a95b"
+    },
+    "customers": {
+      "rows": 9866,
+      "md5": "fafd152b56d2620d0557a3091a87a9ef"
+    },
+    "order_items": {
+      "rows": 11242,
+      "md5": "1b4c4a8621707018c179aad0fc967ae1"
+    },
+    "order_lines": {
+      "rows": 10231,
+      "md5": "29b572b2766b23249152eb0511e35717"
+    },
+    "order_sellers": {
+      "rows": 9997,
+      "md5": "56a97b8d685aee98852835bba7ef0d92"
+    },
+    "orders": {
+      "rows": 9901,
+      "md5": "9d3a5899f50a9f7158a96420d526bf23"
+    }
+  },
+  "measures": {
+    "order_items": "11242",
+    "orders": "9901",
+    "total_item_freight": "224877.74",
+    "total_item_price": "1329141.86"
+  },
+  "checks": [
+    {
+      "block": "check_row_counts",
+      "check": "rows in olist.customers",
+      "severity": "error",
+      "observed": "9866",
+      "expected": "9866",
+      "status": "PASS"
+    },
+    {
+      "block": "check_row_counts",
+      "check": "rows in olist.order_customers",
+      "severity": "error",
+      "observed": "9901",
+      "expected": "9901",
+      "status": "PASS"
+    },
+    {
+      "block": "check_row_counts",
+      "check": "rows in olist.sellers",
+      "severity": "error",
+      "observed": "1617",
+      "expected": "1617",
+      "status": "PASS"
+    },
+    {
+      "block": "check_row_counts",
+      "check": "rows in olist.product_categories",
+      "severity": "error",
+      "observed": "71",
+      "expected": "71",
+      "status": "PASS"
+    },
+    {
+      "block": "check_row_counts",
+      "check": "rows in olist.products",
+      "severity": "error",
+      "observed": "6619",
+      "expected": "6619",
+      "status": "PASS"
+    },
+    {
+      "block": "check_row_counts",
+      "check": "rows in olist.orders",
+      "severity": "error",
+      "observed": "9901",
+      "expected": "9901",
+      "status": "PASS"
+    },
+    {
+      "block": "check_row_counts",
+      "check": "rows in olist.order_sellers",
+      "severity": "error",
+      "observed": "9997",
+      "expected": "9997",
+      "status": "PASS"
+    },
+    {
+      "block": "check_row_counts",
+      "check": "rows in olist.order_lines",
+      "severity": "error",
+      "observed": "10231",
+      "expected": "10231",
+      "status": "PASS"
+    },
+    {
+      "block": "check_row_counts",
+      "check": "rows in olist.order_items",
+      "severity": "error",
+      "observed": "11242",
+      "expected": "11242",
+      "status": "PASS"
+    },
+    {
+      "block": "check_measures",
+      "check": "source vs database: order_items",
+      "severity": "error",
+      "observed": "11242",
+      "expected": "11242",
+      "status": "PASS"
+    },
+    {
+      "block": "check_measures",
+      "check": "source vs database: orders",
+      "severity": "error",
+      "observed": "9901",
+      "expected": "9901",
+      "status": "PASS"
+    },
+    {
+      "block": "check_measures",
+      "check": "source vs database: total_item_freight",
+      "severity": "error",
+      "observed": "224877.74",
+      "expected": "224877.74",
+      "status": "PASS"
+    },
+    {
+      "block": "check_measures",
+      "check": "source vs database: total_item_price",
+      "severity": "error",
+      "observed": "1329141.86",
+      "expected": "1329141.86",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "duplicate keys: product_categories",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "duplicate keys: sellers",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "duplicate keys: products",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "duplicate keys: order_sellers",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "duplicate keys: order_customers",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "duplicate keys: order_lines",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "orders sharing one customer_id (must be 1:1)",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "duplicate keys: order_items",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "duplicate keys: orders",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_duplicate_keys",
+      "check": "duplicate keys: customers",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "orphans: products -> product_categories",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "categories outside the subset closure (no products)",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "orphans: order_sellers -> sellers",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "sellers outside the subset closure (no order_sellers)",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "orphans: order_lines -> products",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "products outside the subset closure (no order_lines)",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "orphans: order_customers -> customers",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "customers with no order record (min 1)",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "order_customers not used by an order (1:1)",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "orphans: orders -> order_customers",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "orphans: order_sellers -> orders",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "order_lines with no order_items (min 1)",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "order_sellers with no order_lines (min 1)",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "orphans: order_items -> order_lines",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_referential",
+      "check": "orphans: order_lines -> order_sellers",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_subset_rule",
+      "check": "orders outside the subset rule",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "products with weight 0 g",
+      "severity": "warn",
+      "observed": "1",
+      "expected": "0",
+      "status": "WARN"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "delivered orders missing the customer delivery time",
+      "severity": "warn",
+      "observed": "1",
+      "expected": "0",
+      "status": "WARN"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "delivered to customer before carrier pickup",
+      "severity": "warn",
+      "observed": "2",
+      "expected": "0",
+      "status": "WARN"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "handed to carrier before approval",
+      "severity": "warn",
+      "observed": "125",
+      "expected": "0",
+      "status": "WARN"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "handed to carrier before purchase",
+      "severity": "warn",
+      "observed": "19",
+      "expected": "0",
+      "status": "WARN"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "cities containing / , \\ or ( (state or country appended)",
+      "severity": "warn",
+      "observed": "7",
+      "expected": "0",
+      "status": "WARN"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "orders past approval stage missing the approval time",
+      "severity": "warn",
+      "observed": "1",
+      "expected": "0",
+      "status": "WARN"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "non-delivered orders that have a customer delivery time",
+      "severity": "warn",
+      "observed": "1",
+      "expected": "0",
+      "status": "WARN"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "orders whose order_item_id is not exactly 1..n",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "zip prefixes reported with more than one state",
+      "severity": "warn",
+      "observed": "12",
+      "expected": "0",
+      "status": "WARN"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "seller shipping deadline before purchase",
+      "severity": "error",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "seller shipping deadline more than 365 days after purchase",
+      "severity": "warn",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "block": "check_domain_quality",
+      "check": "delivered or shipped orders with no items",
+      "severity": "warn",
+      "observed": "0",
+      "expected": "0",
+      "status": "PASS"
+    }
+  ],
+  "comparison_with": "run1",
+  "comparison": [
+    {
+      "item": "fingerprint: customers",
+      "before": "{\"rows\": 9866, \"md5\": \"fafd152b56d2620d0557a3091a87a9ef\"}",
+      "after": "{\"rows\": 9866, \"md5\": \"fafd152b56d2620d0557a3091a87a9ef\"}",
+      "same": true
+    },
+    {
+      "item": "fingerprint: order_customers",
+      "before": "{\"rows\": 9901, \"md5\": \"783a4007a5c7c23e7578b26e8de4a95b\"}",
+      "after": "{\"rows\": 9901, \"md5\": \"783a4007a5c7c23e7578b26e8de4a95b\"}",
+      "same": true
+    },
+    {
+      "item": "fingerprint: order_items",
+      "before": "{\"rows\": 11242, \"md5\": \"1b4c4a8621707018c179aad0fc967ae1\"}",
+      "after": "{\"rows\": 11242, \"md5\": \"1b4c4a8621707018c179aad0fc967ae1\"}",
+      "same": true
+    },
+    {
+      "item": "fingerprint: order_lines",
+      "before": "{\"rows\": 10231, \"md5\": \"29b572b2766b23249152eb0511e35717\"}",
+      "after": "{\"rows\": 10231, \"md5\": \"29b572b2766b23249152eb0511e35717\"}",
+      "same": true
+    },
+    {
+      "item": "fingerprint: order_sellers",
+      "before": "{\"rows\": 9997, \"md5\": \"56a97b8d685aee98852835bba7ef0d92\"}",
+      "after": "{\"rows\": 9997, \"md5\": \"56a97b8d685aee98852835bba7ef0d92\"}",
+      "same": true
+    },
+    {
+      "item": "fingerprint: orders",
+      "before": "{\"rows\": 9901, \"md5\": \"9d3a5899f50a9f7158a96420d526bf23\"}",
+      "after": "{\"rows\": 9901, \"md5\": \"9d3a5899f50a9f7158a96420d526bf23\"}",
+      "same": true
+    },
+    {
+      "item": "fingerprint: product_categories",
+      "before": "{\"rows\": 71, \"md5\": \"ee1682a4a14109f47181eb5279a88b5e\"}",
+      "after": "{\"rows\": 71, \"md5\": \"ee1682a4a14109f47181eb5279a88b5e\"}",
+      "same": true
+    },
+    {
+      "item": "fingerprint: products",
+      "before": "{\"rows\": 6619, \"md5\": \"32ac69800c02115046e94e441cf3ffac\"}",
+      "after": "{\"rows\": 6619, \"md5\": \"32ac69800c02115046e94e441cf3ffac\"}",
+      "same": true
+    },
+    {
+      "item": "fingerprint: sellers",
+      "before": "{\"rows\": 1617, \"md5\": \"d34fed9740265a598338da7567d1b9b9\"}",
+      "after": "{\"rows\": 1617, \"md5\": \"d34fed9740265a598338da7567d1b9b9\"}",
+      "same": true
+    },
+    {
+      "item": "measure: order_items",
+      "before": "\"11242\"",
+      "after": "\"11242\"",
+      "same": true
+    },
+    {
+      "item": "measure: orders",
+      "before": "\"9901\"",
+      "after": "\"9901\"",
+      "same": true
+    },
+    {
+      "item": "measure: total_item_freight",
+      "before": "\"224877.74\"",
+      "after": "\"224877.74\"",
+      "same": true
+    },
+    {
+      "item": "measure: total_item_price",
+      "before": "\"1329141.86\"",
+      "after": "\"1329141.86\"",
+      "same": true
+    }
+  ]
+}

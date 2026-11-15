@@ -1,0 +1,22 @@
+# Local development database. Credentials come from .env (see .env.example).
+name: olist-pipeline
+
+services:
+  db:
+    image: postgres:16-alpine  # tested with 16.12; the schema uses nothing newer than PostgreSQL 14
+    environment:
+      POSTGRES_USER: ${PGUSER:?set PGUSER in .env}
+      POSTGRES_PASSWORD: ${PGPASSWORD:?set PGPASSWORD in .env}
+      POSTGRES_DB: ${PGDATABASE:?set PGDATABASE in .env}
+    ports:
+      - "127.0.0.1:${PGPORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  pgdata:

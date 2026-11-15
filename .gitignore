@@ -218,3 +218,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Project rules ---
+# Local credentials: only .env.example (variable names, no values) is committed
+.env.*
+!.env.example
+
+# Raw Olist data is downloaded by scripts/download_olist.sh and never committed
+data/
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
