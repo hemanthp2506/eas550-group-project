@@ -1,0 +1,27 @@
+run 1 succeeded -> postgresql+psycopg://olist:***@localhost:5432/olist?sslmode=disable
+
+source file                                    read  in subset  rejected  corrected
+olist_customers_dataset.csv                   99441       9901         0          0
+olist_orders_dataset.csv                      99441       9901         0          0
+olist_order_items_dataset.csv                112650      11242         0          0
+olist_products_dataset.csv                    32951       6619         0          0
+olist_sellers_dataset.csv                      3095       1617         0          3
+product_category_name_translation.csv            71         69         0          0
+
+table                        loaded  inserted  updated  unchanged
+olist.customers                9866      9866        0          0
+olist.order_customers          9901      9901        0          0
+olist.sellers                  1617      1617        0          0
+olist.product_categories         71        71        0          0
+olist.products                 6619      6619        0          0
+olist.orders                   9901      9901        0          0
+olist.order_sellers            9997      9997        0          0
+olist.order_lines             10231     10231        0          0
+olist.order_items             11242     11242        0          0
+
+data-quality decisions (action, rule, source file: rows):
+  corrected city_ascii_folded                  olist_sellers_dataset.csv: 1
+  corrected city_not_a_place_set_null          olist_sellers_dataset.csv: 1
+  corrected city_whitespace_normalized         olist_sellers_dataset.csv: 1
+
+source totals: orders=9901, order_items=11242, total_item_price=1329141.86, total_item_freight=224877.74
